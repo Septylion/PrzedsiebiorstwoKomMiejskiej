@@ -13,6 +13,7 @@ public class Przystanek {
         this.nazwa_ulicy = nazwa_ulicy;
         this.nr_lini = nr_lini;
 
+
     }
 
 }

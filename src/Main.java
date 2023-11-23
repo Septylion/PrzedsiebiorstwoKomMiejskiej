@@ -28,6 +28,7 @@ public class Main {
         linia_1.add(przys_2);
         linia_1.add(przys_3);
         linia_1.add(przys_4);
+
         /// linia 2
         ArrayList<Przystanek> linia_2 = new ArrayList<>();
         Przystanek przys_5 = new Przystanek("6:40", "Gen.Sikorskiego", 2);
