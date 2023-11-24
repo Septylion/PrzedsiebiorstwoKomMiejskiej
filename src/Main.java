@@ -4,9 +4,12 @@ import Pracownicy.Prac_Administracja;
 import Przystanek.Przystanek;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        Scanner scan1 = new Scanner(System.in);
+        int wyb = scan1.nextInt();
         /// kierowcy
         Kierowca kierowca_1 = new Kierowca("Marcin", "Polak", 3000, "RTA34TW0", 7);
         Kierowca kierowca_2 = new Kierowca("Wojciech", "Polak", 3000, "RTA990A", 10);
@@ -50,7 +53,29 @@ public class Main {
         linia_3.add(przys_11);
         linia_3.add(przys_12);
 
+switch (wyb){
 
+    case 1 : {
+        for (int i = 0; i < linia_1.toArray().length; i++) {
+            System.out.println(linia_1.get(i).toString());
+
+        }
+    }
+
+    case 2 : {
+        for (int i = 0; i < linia_2.toArray().length;i++) {
+            System.out.println(linia_2.get(i).toString());
+
+
+        }
+    }
+    case 3 : {
+        for (int i = 0; i < linia_3.toArray().length;i++) {
+            System.out.println(linia_3.get(i).toString());
+
+        }
+        }
+    }
 
     }
 }
