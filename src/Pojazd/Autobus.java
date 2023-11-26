@@ -15,6 +15,9 @@ public class Autobus {
         this.num_of_line = num_of_line;
     }
 
+    public Autobus() {
+    }
+
     @Override
     public String toString() {
         return "Autobus{" +

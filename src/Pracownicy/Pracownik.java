@@ -15,6 +15,9 @@ public class Pracownik {
         this.experience = experience;
     }
 
+    public Pracownik() {
+    }
+
     @Override
     public String toString() {
         return "Pracownik{" +

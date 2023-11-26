@@ -8,6 +8,10 @@ public class Kierowca extends Pracownik{
         this.rejestr_pojazdu = rejestr_pojazdu;
     }
 
+    public Kierowca() {
+
+    }
+
     public static double Count_salary(){
         return salary * (salary * (experience / 100));
     }

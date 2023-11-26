@@ -8,6 +8,12 @@ public class Prac_Administracja extends Pracownik{
         this.id = id;
 
     }
+
+    public Prac_Administracja() {
+
+
+    }
+
     public static double Count_salary_adm(){
         return (salary * 2 + (salary * (experience / 100)));
     }
@@ -15,7 +21,6 @@ public class Prac_Administracja extends Pracownik{
     @Override
     public String toString() {
         return "Prac_Administracja{" +
-                "id=" + id +
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 '}';

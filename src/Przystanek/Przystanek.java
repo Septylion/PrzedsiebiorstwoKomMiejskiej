@@ -16,12 +16,14 @@ public class Przystanek {
 
     }
 
+    public Przystanek() {
+    }
+
     @Override
     public String toString() {
         return "Przystanek{" +
                 "godzina_przyjazdu='" + godzina_przyjazdu + '\'' +
                 ", nazwa_ulicy='" + nazwa_ulicy + '\'' +
-                ", nr_lini=" + nr_lini +
                 '}';
     }
 }
