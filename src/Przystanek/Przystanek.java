@@ -3,7 +3,6 @@ package Przystanek;
 public class Przystanek {
     String godzina_przyjazdu;
 
-
     String nazwa_ulicy;
 
     int nr_lini;

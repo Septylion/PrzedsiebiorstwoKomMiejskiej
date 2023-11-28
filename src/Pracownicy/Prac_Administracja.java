@@ -15,7 +15,7 @@ public class Prac_Administracja extends Pracownik{
     }
 
     public static double Count_salary_adm(){
-        return (salary * 2 + (salary * (experience / 100)));
+        return (salary + ((salary * 2 )/ experience));
     }
 
     @Override

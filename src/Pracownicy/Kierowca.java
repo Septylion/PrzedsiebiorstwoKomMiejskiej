@@ -13,15 +13,15 @@ public class Kierowca extends Pracownik{
     }
 
     public static double Count_salary(){
-        return salary * (salary * (experience / 100));
+        return salary + ((salary * 2 )/ experience) ;
     }
 
     @Override
     public String toString() {
         return "Kierowca{" +
-                "rejestr_pojazdu='" + rejestr_pojazdu + '\'' +
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
+                "rejestr_pojazdu='" + rejestr_pojazdu + '\'' +
                 '}';
     }
 }
