@@ -95,7 +95,7 @@ public class Main {
                     System.out.println("Rozklad lini nr.1");
                     for (int i = 1; i < linia_1.toArray().length; i++) {
                         System.out.println(linia_1.get(i).toString());
-                        urzytk = 3;
+
                     }
                 }
 
@@ -103,7 +103,7 @@ public class Main {
                     System.out.println("Rozklad lini nr.2");
                     for (int i = 1; i < linia_2.toArray().length; i++) {
                         System.out.println(linia_2.get(i).toString());
-                        urzytk = 3;
+
 
                     }
                 }
@@ -111,7 +111,7 @@ public class Main {
                     System.out.println("Rozklad lini nr.3");
                     for (int i = 1; i < linia_3.toArray().length; i++) {
                         System.out.println(linia_3.get(i).toString());
-                        urzytk = 3;
+
                     }
                 }
                 if (wyb == 4) {
@@ -129,13 +129,15 @@ public class Main {
                         System.out.println(linia_3.get(i).toString());
 
                     }
-                    urzytk = 3;
+
+
                 }
             }
             if (urzytk == 2) {
                 System.out.println("Lista pracownikow - 1");
                 System.out.println("Wyszukaj autobus oraz kierowce po nr. linii - 2");
                 System.out.println("Policz wyplate - 3");
+                System.out.println("Dadaj pracownika - 4");
                 int wyb2 = scan1.nextInt();
 
                 if (wyb2 == 1) {
@@ -146,24 +148,32 @@ public class Main {
                     for (int i = 1; i < lista_pracadm.toArray().length; i++) {
                         System.out.println(lista_pracadm.get(i).toString());
                     }
-                    urzytk = 3;
+                    System.out.println("zakonczyc t,n ?");
+                    String wybo = scan1.next();
+                    if(wybo.equals("t")){
+                        urzytk = 3;}
+
                 }
                 if (wyb2 == 2) {
                     System.out.println("Podaj nr. lini");
                     int wyb_lini = scan1.nextInt();
-                    if (wyb_lini > list_autob.size()) {
+                    if (wyb_lini > (list_autob.size() - 1) || wyb_lini == 0) {
                         System.out.println("podana wartosc jest nieprawidlowa");
-                        urzytk = 3;
+                        System.out.println("zakonczyc t,n ?");
+                        String wybo = scan1.next();
+                        if(wybo.equals("t")){
+                            urzytk = 3;}
+
+
                     } else {
 
                         System.out.println("Autobus oraz kierowca kursujacy po lini nr." + wyb_lini);
                         System.out.println(lista_kierow.get(wyb_lini).toString());
                         System.out.println(list_autob.get(wyb_lini).toString());
-                        urzytk = 3;
-
                     }
                 }
                 if (wyb2 == 3) {
+
                     for (int i = 1; i < lista_kierow.toArray().length; i++) {
                         System.out.println(lista_kierow.get(i).toString());
                     }
@@ -187,7 +197,61 @@ public class Main {
                             System.out.println("Wyplata to :" + Math.round(kierow.Count_salary()));
                         }
 
+                        System.out.println("zakonczyc t,n ?");
+                        String wybo = scan1.next();
+                        if(wybo.equals("t")){
+                            urzytk = 3;}
                     }
+
+
+                }
+                if (wyb2 == 4) {
+                    System.out.println("Dodawanie Pracownika ");
+                    System.out.println("Chcesz dodac pracownika administracji - 1 czy kierwoce - 2 ?");
+                    int chois = scan1.nextInt();
+                    if (chois == 1) {
+                        System.out.println("Podaj imie");
+                        String name = scan1.next();
+                        System.out.println("Podaj Nazwisko");
+                        String surname = scan1.next();
+                        System.out.println("Podaj pensje");
+                        double salary = scan1.nextInt();
+                        System.out.println("Podaj doswiadczenie");
+                        int experience = scan1.nextInt();
+                        lista_pracadm.add(new Prac_Administracja(name, surname, salary, experience));
+                        System.out.println("zakonczyc t,n ?");
+                        String wybo = scan1.next();
+                        if(wybo.equals("t")){
+                            urzytk = 3;}
+
+                    } else if (chois == 2) {
+                        System.out.println("Podaj imie");
+                        String name = scan1.next();
+                        System.out.println("Podaj Nazwisko");
+                        String surname = scan1.next();
+                        System.out.println("Podaj pensje");
+                        double salary = scan1.nextInt();
+                        System.out.println("Podaj rejestracje pojazdu ( pusty ciag oznacza brak przypisanego autobusu)");
+                        String rej = scan1.nextLine();
+                        System.out.println("Podaj doswiadczenie");
+                        int experience = scan1.nextInt();
+                        lista_kierow.add(new Kierowca(name, surname, salary, rej, experience));
+
+                        System.out.println("zakonczyc t,n ?");
+                        String wybo = scan1.next();
+                        if (wybo.equals("t")) {
+                            urzytk = 3;
+                        }
+                    } else {
+                        System.out.println("Nieprawidlowa wartosc");
+
+                        System.out.println("zakonczyc t,n ?");
+                        String wybo = scan1.next();
+                        if (wybo.equals("t")) {
+                            urzytk = 3;
+                        }
+                    }
+
 
 
                 }
