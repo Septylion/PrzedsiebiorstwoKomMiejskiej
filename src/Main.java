@@ -385,7 +385,7 @@ public class Main {
                     String nazwa_ulicy = scan1.next();
                     System.out.println("podaj nazwe ulicy");
                     int nr_lini = scan1.nextInt();
-                    if(nr_lini > group.size() || nr_lini == 0){
+                    if( nr_lini == 0){
                         System.out.println("Nie ma takiej lini");
                     }
                     else if (nr_lini == 1){
