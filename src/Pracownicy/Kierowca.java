@@ -3,9 +3,12 @@ package Pracownicy;
 public class Kierowca extends Pracownik{
     String rejestr_pojazdu;
 
-    public Kierowca(String name, String surname, double salary, String rejestr_pojazdu,int experience) {
+    int nrlini;
+
+    public Kierowca(String name, String surname, double salary, String rejestr_pojazdu,int experience,int nrlini) {
         super(name, surname, salary,experience);
         this.rejestr_pojazdu = rejestr_pojazdu;
+        this.nrlini = nrlini;
     }
 
     public Kierowca() {
