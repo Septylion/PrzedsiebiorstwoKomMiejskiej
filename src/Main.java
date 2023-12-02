@@ -12,16 +12,19 @@ public class Main {
             double cena_biletu = 4;
 
         /// kierowcy
+        Kierowca k;
         Kierowca kierwowca_0 = new Kierowca("PLACEHOLDER", "PLACEHOLDER", 0, "PLACEHOLDER", 0,0);
         Kierowca kierowca_1 = new Kierowca("Marcin", "Wolny", 3000, "RTA34TW0", 7,1);
         Kierowca kierowca_2 = new Kierowca("Wojciech", "Polak", 3000, "RTA990A", 10,2);
         Kierowca kierowca_3 = new Kierowca("Mahmed", "Billada", 3000, "RT700A", 13,3);
         /// autobusy
+        Autobus a;
         Autobus autob_0 = new Autobus();
         Autobus autob_1 = new Autobus("TKL1000", 48, 10000.0, "RTA34TW0", 1);
         Autobus autobus_2 = new Autobus("TWK2137", 56, 12000.0, "RTA990A", 2);
         Autobus autob_3 = new Autobus("WTC1109", 34, 2137.0, "RT700A", 3);
         /// Pracownik_Admin
+        Prac_Administracja p;
         Prac_Administracja prac_0 = new Prac_Administracja("PLACEHOLDER", "PLACEHOLDER", 0, 0);
         Prac_Administracja prac_1 = new Prac_Administracja("Julia", "Nowak", 4000, 4);
         Prac_Administracja prac_2 = new Prac_Administracja("Henryk", "Kowalski", 4000, 9);
@@ -45,6 +48,7 @@ public class Main {
 
         ///linia 1
         ArrayList<Przystanek> linia_1 = new ArrayList<>();
+        Przystanek pr;
         Przystanek przys_1 = new Przystanek("6:00", "Jana Pawla 2", 1);
         Przystanek przys_2 = new Przystanek("6:30", "Sienkiewicza", 1);
         Przystanek przys_3 = new Przystanek("7:00", "Bema", 1);
@@ -276,7 +280,8 @@ public class Main {
                         double salary = scan1.nextInt();
                         System.out.println("Podaj doswiadczenie");
                         int experience = scan1.nextInt();
-                        lista_pracadm.add(new Prac_Administracja(name, surname, salary, experience));
+                         p = new Prac_Administracja(name, surname, salary, experience);
+                         lista_pracadm.add(p);
                         System.out.println("zakonczyc t,n ?");
                         String wybo = scan1.next();
                         if (wybo.equals("t")) {
@@ -300,7 +305,8 @@ public class Main {
                             System.out.println("Nie ma takiej linii");
                         }
                         else {
-                            lista_kierow.add(new Kierowca(name, surname, salary, rej, experience,nrlini));
+                            k = new Kierowca(name, surname, salary, rej, experience,nrlini);
+                            lista_kierow.add(k);
                         }
 
 
@@ -328,7 +334,8 @@ public class Main {
                      }
                      else
                      {
-                         list_autob.add(new Autobus(model, numofseats, milage, rej,line));
+                          a = new Autobus(model, numofseats, milage, rej,line);
+                         list_autob.add(a);
 
                          for (int i = 1; i < list_autob.toArray().length; i++) {
                              System.out.println(list_autob.get(i).toString());
@@ -374,7 +381,6 @@ public class Main {
                     String wybo = scan1.next();
                     if (wybo.equals("t")) {
                         urzytk = 3;
-
                     }
                 }
                 if (wyb2 == 7){
@@ -389,13 +395,16 @@ public class Main {
                         System.out.println("Nie ma takiej lini");
                     }
                     else if (nr_lini == 1){
-                        linia_1.add((new Przystanek(godzina_przyjazdu,nazwa_ulicy,nr_lini)));
+                        pr = new Przystanek(godzina_przyjazdu,nazwa_ulicy,nr_lini);
+                        linia_3.add(pr);
                     }
                     else if (nr_lini == 2){
-                        linia_2.add((new Przystanek(godzina_przyjazdu,nazwa_ulicy,nr_lini)));
+                        pr =  new Przystanek(godzina_przyjazdu,nazwa_ulicy,nr_lini);
+                        linia_3.add(pr);
                     }
                     else if (nr_lini == 3){
-                        linia_3.add((new Przystanek(godzina_przyjazdu,nazwa_ulicy,nr_lini)));
+                        pr = new Przystanek(godzina_przyjazdu,nazwa_ulicy,nr_lini);
+                        linia_3.add(pr);
                     }
 
                 }
