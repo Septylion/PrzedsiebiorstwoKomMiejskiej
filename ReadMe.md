@@ -1,11 +1,12 @@
 Przedsiebiorstwo Komunikacji Miejskiej
 
-Menu przedstawia 2 opcje ( + zamkniecie)
-Strone klienta ktora zawiera:
--Wyswietlanie linii
--Wglad w ceny biletow
-/
-Strone Pracownika ktora zawiera:
--Wyswietlanie pracownikow 
--Dodawanie i usuwanie pracownikow ,autobusow i przystankow
--wyliczanie wyplaty 
+<br>Menu przedstawia 2 opcje ( + zamkniecie)
+<br>Strone klienta ktora zawiera:
+<br>-Wyswietlanie linii
+<br>-Wglad w ceny biletow
+<hr>
+<br>Strone Pracownika ktora zawiera:
+<br>-Wyswietlanie pracownikow 
+<br>-Dodawanie i usuwanie pracownikow ,autobusow i przystankow
+<br>-wyliczanie wyplaty 
+<br>(Wszytkie pomysły co do tematu pomimo trudnosci wprowadzenia czegos sensownego nie zostały wykorzystane tzn. nie chciałem powielać wielu tych samych funkcji dodawania i usuwania ponieważ zwyczajnie powtarzały by sie.)
