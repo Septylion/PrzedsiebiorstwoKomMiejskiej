@@ -215,18 +215,13 @@ public class Main {
 
                     } else {
                         System.out.println("Autobus oraz kierowca kursujacy po lini nr." + wyb_lini);
-                        for (int i = 1; i < list_autob.size(); i++) {
-                            if (wyb_lini == list_autob.indexOf(i) ) {
-                                System.out.println(list_autob.get(i).toString());
+                      
+                                System.out.println(list_autob.get(wyb_lini).getModel());
+                    
+                                System.out.println(lista_kierow.get(wyb_lini).getName());
                             }
 
-                        }
-                        for (int i = 1; i < lista_kierow.size(); i++) {
-                            if (wyb_lini == lista_kierow.indexOf(i) ) {
-                                System.out.println(lista_kierow.get(i).toString());
-                            }
-
-                        }
+                        
 
 
 
